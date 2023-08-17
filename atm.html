@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("WELCOME\n\nPress Ok to input pin")
+        let pin = prompt("Enter pin")
+        if (isNaN(pin)){
+            alert("Not a Number\n Try again")
+            exit()
+        }
+        if (pin.length == 4){
+            alert("Welcome Henry Ije\n\n Click Ok to continue")
+        }else {
+            alert("Pin is wrong")
+            exit()
+        }
+        let transaction = prompt("Select a transaction\n1. Account balance\n2. Withdrawal\n3. Deposit \n4. Transfer")
+        if (transaction == 1){
+            let balance = Math.floor(Math.random() * 10000000)
+            alert(`Your account balance is ${balance} naira`)
+        }
+        if (transaction == 2){
+            let withdrawal = prompt("Enter the amount you want to withdraw")
+            alert(`Take your cash`)
+        }
+        if (transaction == 3){
+            let deposit = prompt("Enter amount to deposit")
+            alert("Transaction Succesful")
+        }
+         if (transaction == 4){
+            let transfer = prompt("Enter amount to transfer")
+            if (isNaN(transfer)){
+                alert("Not a Number\n\nTry again")
+                exit()
+            }
+            let recipient = prompt("Enter recipient account number")
+            alert(`${transfer} naira has been successfully transfered to ${recipient}`)
+        }
+
+    </script>
+    
+</body>
+</html>
